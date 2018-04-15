@@ -11,8 +11,10 @@
     "url": "git+https://github.com/khiav223577/roulette-wheel-selection.git"
   },
   "keywords": [
-    "roulette-wheel",
-    "genetic-algorithm"
+    "roulette",
+    "wheel",
+    "genetic",
+    "algorithm"
   ],
   "author": "khiav223577",
   "license": "MIT",
