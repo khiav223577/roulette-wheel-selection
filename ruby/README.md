@@ -7,6 +7,52 @@
 # roulette-wheel-selection
 
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'roulette-wheel-selection'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install roulette-wheel-selection
+
+## Usage
+
+### require the library
+```rb
+require 'roulette-wheel-selection'
+```
+
+### Hash format
+```rb
+RouletteWheelSelection.sample(
+  'cola'   => 40, 
+  'sprite' => 20, 
+  'fanta'  => 30,
+  'wine'   => 40,
+)
+# => 'cola'
+```
+
+### Array format
+```rb
+drinks = [
+  { name: 'cola', weight: 40 },
+  { name: 'sprite', weight: 20 },
+  { name: 'fanta', weight: 30 },
+  { name: 'wine', weight: 40 },
+]
+RouletteWheelSelection.sample(drinks, :weight)
+# => 'cola'
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
