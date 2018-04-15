@@ -8,7 +8,6 @@ npm i roulette-wheel-selection
 
 ## Usage
 
-### Instantiate
 ```js
 import rouletteWheelSelection from 'roulette-wheel-selection'
 
