@@ -1,0 +1,23 @@
+{
+  "name": "roulette-wheel-selection",
+  "version": "1.0.0",
+  "description": "## Install",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khiav223577/roulette-wheel-selection.git"
+  },
+  "keywords": [
+    "roulette-wheel",
+    "genetic-algorithm"
+  ],
+  "author": "khiav223577",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khiav223577/roulette-wheel-selection/issues"
+  },
+  "homepage": "https://github.com/khiav223577/roulette-wheel-selection#readme"
+}
