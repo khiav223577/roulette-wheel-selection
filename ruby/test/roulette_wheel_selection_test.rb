@@ -13,6 +13,14 @@ class RouletteWheelSelectionTest < Minitest::Test
     assert_nil RouletteWheelSelection.sample({})
   end
 
+  def test_hash_parameter_with_all_zero_weights
+    assert_nil RouletteWheelSelection.sample('a' => 0, 'b' => 0, 'c' => 0)
+  end
+
+  def test_hash_parameter_with_some_zero_weights
+    assert_equal 'b', RouletteWheelSelection.sample('a' => 0, 'b' => 1, 'c' => 0)
+  end
+
   def test_array_parameter
     objects = [
       {name: 'a', weight: 10},
@@ -24,6 +32,23 @@ class RouletteWheelSelectionTest < Minitest::Test
 
   def test_input_array_is_empty
     assert_nil RouletteWheelSelection.sample([], :weight)
+  end
+
+  def test_array_parameter_with_all_zero_weights
+    objects = [
+      {name: 'a', weight: 0},
+      {name: 'b', weight: 0},
+    ]
+    assert_nil RouletteWheelSelection.sample(objects, :weight)
+  end
+
+  def test_array_parameter_with_some_zero_weights
+    objects = [
+      {name: 'a', weight: 0},
+      {name: 'b', weight: 0},
+      {name: 'c', weight: 1},
+    ]
+    assert_equal objects[2], RouletteWheelSelection.sample(objects, :weight)
   end
 
   def test_string_parameter
