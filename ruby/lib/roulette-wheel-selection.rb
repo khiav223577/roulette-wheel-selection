@@ -23,7 +23,6 @@ class RouletteWheelSelection
       return if total_rate == 0
       random_seed = rand(total_rate)
       hash.each do |obj, rate|
-        next if rate == 0
         return obj if random_seed < rate
         random_seed -= rate
       end
