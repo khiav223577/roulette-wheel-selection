@@ -19,8 +19,8 @@ class RouletteWheelSelection
     end
 
     def sample_from_hash(hash)
-      return if hash.empty?
-      total_rate = hash.values.inject(&:+)
+      total_rate = hash.values.inject(&:+) || 0
+      return if total_rate == 0
       random_seed = rand(total_rate)
       hash.each do |obj, rate|
         return obj if random_seed < rate
