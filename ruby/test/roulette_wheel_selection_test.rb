@@ -9,6 +9,10 @@ class RouletteWheelSelectionTest < Minitest::Test
     assert_equal 'b', RouletteWheelSelection.sample('a' => 10, 'b' => 20, 'c' => 30)
   end
 
+  def test_input_hash_is_empty
+    assert_nil RouletteWheelSelection.sample({})
+  end
+
   def test_array_parameter
     objects = [
       {name: 'a', weight: 10},
@@ -18,8 +22,12 @@ class RouletteWheelSelectionTest < Minitest::Test
     assert_equal objects[1], RouletteWheelSelection.sample(objects, :weight)
   end
 
+  def test_input_array_is_empty
+    assert_nil RouletteWheelSelection.sample([], :weight)
+  end
+
   def test_string_parameter
-    assert_raises RuntimeError do 
+    assert_raises RuntimeError do
       RouletteWheelSelection.sample('This is string')
     end
   end
