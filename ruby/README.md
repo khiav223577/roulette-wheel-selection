@@ -31,17 +31,27 @@ require 'roulette-wheel-selection'
 ```
 
 ### Hash format
+
 ```rb
 RouletteWheelSelection.sample(
-  'cola'   => 40, 
-  'sprite' => 20, 
+  'cola'   => 40,
+  'sprite' => 20,
   'fanta'  => 30,
   'wine'   => 40,
 )
 # => 'cola'
 ```
 
+#### sample n random elements
+
+```rb
+roulette = RouletteWheelSelection.new('ps4' => 50, 'switch' => 40, 'xbox' => 30)
+roulette.sample(3)
+# => ['ps4', 'switch', 'xbox']
+```
+
 ### Array format
+
 ```rb
 drinks = [
   { name: 'cola', weight: 40 },
@@ -50,7 +60,7 @@ drinks = [
   { name: 'wine', weight: 40 },
 ]
 RouletteWheelSelection.sample(drinks, :weight)
-# => 'cola'
+# => { name: 'cola', weight: 40 }
 ```
 
 ## Development
