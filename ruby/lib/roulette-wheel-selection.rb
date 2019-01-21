@@ -38,9 +38,9 @@ class RouletteWheelSelection
   private
 
   def sample_n_objects(num)
-    num = total_rate if num > total_rate
-    total_rate = @total_rate
     hash = @hash.clone
+    total_rate = @total_rate
+    num = total_rate if num > total_rate
     return Array.new(num) do
       obj = sample_an_object(total_rate, hash)
       hash[obj] -= 1
