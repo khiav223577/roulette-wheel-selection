@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require "roulette-wheel-selection/version"
 
 class RouletteWheelSelection
+  NOT_SET = Object.new
+
   class << self
     def sample(*args)
       object = args.first
@@ -28,11 +32,12 @@ class RouletteWheelSelection
     @total_rate = hash.values.inject(&:+) || 0
   end
 
-  def sample(num = 1)
+  def sample(num = NOT_SET)
     return if @total_rate == 0
+    return sample_an_object(@total_rate, @hash) if num == NOT_SET
     return if num < 1
     return sample_n_objects(num) if num > 1
-    return sample_an_object(@total_rate, @hash)
+    return [sample_an_object(@total_rate, @hash)]
   end
 
   private
