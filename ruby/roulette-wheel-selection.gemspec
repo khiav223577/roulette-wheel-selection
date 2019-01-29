@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["khiav reoy"]
   spec.email         = ["mrtmrt15xn@yahoo.com.tw"]
 
-  spec.summary       = %q{}
-  spec.description   = %q{}
+  spec.summary       = %q{Provide an algorithm allowing you to do weighted sampling.}
+  spec.description   = %q{Provide an algorithm allowing you to do weighted sampling.}
   spec.homepage      = "https://github.com/khiav223577/roulette-wheel-selection"
   spec.license       = "MIT"
 
