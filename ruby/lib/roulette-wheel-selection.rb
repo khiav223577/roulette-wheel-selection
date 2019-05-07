@@ -29,7 +29,7 @@ class RouletteWheelSelection
 
   def initialize(hash)
     @hash = hash
-    @total_rate = hash.values.inject(&:+) || 0
+    @total_rate = hash.values.inject(0, :+)
   end
 
   def sample(num = NOT_SET)
