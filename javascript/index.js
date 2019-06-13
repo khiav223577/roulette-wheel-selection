@@ -10,4 +10,7 @@ function RouletteWheelSelection(objects, fAttr){ // object = { attr1: xx1, attr2
   }
 }
 
-module.exports = RouletteWheelSelection;
+if (typeof module !== 'undefined' && module.exports){
+  module.exports = RouletteWheelSelection;
+}
+
