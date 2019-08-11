@@ -1,22 +1,23 @@
+sudo: false
+env:
+  global:
+    - CC_TEST_REPORTER_ID=46fbf2f894dec215d0e429321c29b0724340c8e1064cd97af4917290605ee94c
 language: ruby
 rvm:
   - 2.2
   - 2.3
-sudo: required
-dist: trusty
+gemfile:
+  - ruby/Gemfile
 before_install:
   - gem i rubygems-update -v '<3' && update_rubygems
   - gem install bundler -v 1.17.3
   - gem --version
   - cd ruby
-gemfile:
-  - ruby/Gemfile
-env:
-  global:
-    - CC_TEST_REPORTER_ID=46fbf2f894dec215d0e429321c29b0724340c8e1064cd97af4917290605ee94c
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+script:
+  - bundle exec rake test
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
