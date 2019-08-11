@@ -26,6 +26,13 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.metadata    = {
+    'homepage_uri'      => 'https://github.com/khiav223577/roulette-wheel-selection',
+    'changelog_uri'     => 'https://github.com/khiav223577/roulette-wheel-selection/blob/master/ruby/CHANGELOG.md',
+    'source_code_uri'   => 'https://github.com/khiav223577/roulette-wheel-selection',
+    'documentation_uri' => 'http://www.rubydoc.info/gems/roulette-wheel-selection',
+    'bug_tracker_uri'   => 'https://github.com/khiav223577/roulette-wheel-selection/issues',
+  }
 
   spec.add_development_dependency 'bundler', '>= 1.17', '< 3.x'
   spec.add_development_dependency "rake", "~> 12.0"
