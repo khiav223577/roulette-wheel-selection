@@ -1,5 +1,8 @@
 ## Change Log
 
+### [v1.1.1](https://github.com/khiav223577/roulette-wheel-selection/compare/v1.1.0...v1.1.1) 2019/08/11
+- [#8](https://github.com/khiav223577/roulette-wheel-selection/pull/8) refactor: don't need to use proc in inject method (@khiav223577)
+
 ### [v1.1.0](https://github.com/khiav223577/roulette-wheel-selection/compare/v1.0.2...v1.1.0) 2019/01/28
 - [#7](https://github.com/khiav223577/roulette-wheel-selection/pull/7) Behavior should be like Array#sample (@khiav223577)
 
