@@ -45,5 +45,7 @@ jobs:
     - name: Publish code coverage
       if: ${{ success() }}
       uses: paambaati/codeclimate-action@v2.7.5
+      with:
+        workingDirectory: ruby
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
