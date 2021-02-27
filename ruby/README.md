@@ -1,5 +1,5 @@
 [![Gem Version](https://img.shields.io/gem/v/roulette-wheel-selection.svg?style=flat)](https://rubygems.org/gems/roulette-wheel-selection)
-[![Build Status](https://github.org/khiav223577/roulette-wheel-selection.svg?branch=master)](https://github.org/khiav223577/roulette-wheel-selection)
+[![Build Status](https://github.com/khiav223577/roulette-wheel-selection/workflows/Ruby/badge.svg)](https://github.com/khiav223577/roulette-wheel-selection/actions)
 [![RubyGems](http://img.shields.io/gem/dt/roulette-wheel-selection.svg?style=flat)](https://rubygems.org/gems/roulette-wheel-selection)
 [![Code Climate](https://codeclimate.com/github/khiav223577/roulette-wheel-selection/badges/gpa.svg)](https://codeclimate.com/github/khiav223577/roulette-wheel-selection)
 [![Test Coverage](https://codeclimate.com/github/khiav223577/roulette-wheel-selection/badges/coverage.svg)](https://codeclimate.com/github/khiav223577/roulette-wheel-selection/coverage)
