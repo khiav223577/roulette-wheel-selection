@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "roulette-wheel-selection"
   spec.version       = RouletteWheelSelection::VERSION
   spec.authors       = ["khiav reoy"]
-  spec.email         = ["mrtmrt15xn@yahoo.com.tw"]
+  spec.email         = ["khiav223577@gmail.com"]
 
   spec.summary       = %q{Provide an algorithm allowing you to do weighted sampling.}
   spec.description   = %q{Provide an algorithm allowing you to do weighted sampling.}
